@@ -706,6 +706,10 @@ video {
   --tw-border-opacity: 1;
   border-color: rgb(99 102 241 / var(--tw-border-opacity));
 }
+.border-lightBlue {
+  --tw-border-opacity: 1;
+  border-color: rgb(184 184 255 / var(--tw-border-opacity));
+}
 .bg-gray-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
@@ -738,6 +742,10 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(55 48 163 / var(--tw-bg-opacity));
 }
+.bg-pastelYellow {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 238 221 / var(--tw-bg-opacity));
+}
 .bg-red-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(254 226 226 / var(--tw-bg-opacity));
@@ -749,6 +757,14 @@ video {
 .bg-red-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+}
+.bg-softWhite {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 247 255 / var(--tw-bg-opacity));
+}
+.bg-violetCustom {
+  --tw-bg-opacity: 1;
+  background-color: rgb(147 129 255 / var(--tw-bg-opacity));
 }
 .bg-white {
   --tw-bg-opacity: 1;
@@ -908,6 +924,10 @@ video {
   --tw-text-opacity: 1;
   color: rgb(55 48 163 / var(--tw-text-opacity));
 }
+.text-lightBlue {
+  --tw-text-opacity: 1;
+  color: rgb(184 184 255 / var(--tw-text-opacity));
+}
 .text-red-800 {
   --tw-text-opacity: 1;
   color: rgb(153 27 27 / var(--tw-text-opacity));
@@ -915,6 +935,10 @@ video {
 .text-slate-600 {
   --tw-text-opacity: 1;
   color: rgb(71 85 105 / var(--tw-text-opacity));
+}
+.text-violetCustom {
+  --tw-text-opacity: 1;
+  color: rgb(147 129 255 / var(--tw-text-opacity));
 }
 .text-white {
   --tw-text-opacity: 1;
@@ -931,6 +955,14 @@ video {
 .placeholder-gray-400::placeholder {
   --tw-placeholder-opacity: 1;
   color: rgb(156 163 175 / var(--tw-placeholder-opacity));
+}
+.placeholder-lightBlue::-moz-placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgb(184 184 255 / var(--tw-placeholder-opacity));
+}
+.placeholder-lightBlue::placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgb(184 184 255 / var(--tw-placeholder-opacity));
 }
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
@@ -960,6 +992,11 @@ video {
 .hover\:bg-indigo-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(67 56 202 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-lightBlue:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(184 184 255 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 640px) {
