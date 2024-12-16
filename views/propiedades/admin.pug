@@ -58,7 +58,7 @@ block contenido
                                 a(href=`/mis-propiedades?pagina=${n}` class=`${paginaActual == n ? 'bg-violetCustom border-violetCustom text-white' : 'bg-white border-lightBlue text-gray-500 hover:bg-lightBlue' } relative inline-flex items-center px-4 py-2 border text-sm font-medium`) 
                                     | #{n++}
         else 
-            p.text-center text-gray-600 No hay propiedades
+            p.text-center No hay propiedades
 
 block scripts 
     script(src="/js/cambiarEstado.js")

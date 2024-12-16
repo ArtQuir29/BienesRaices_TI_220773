@@ -13,23 +13,29 @@ block contenido
 
         .mt-8.mx-auto.max-w-md 
             .bg-softWhite.py-8.px-4.shadow
-                form.space-y-5(method="POST" action="/auth/registro" novalidate)
-                    input(type="hidden" name="_csrf" value= csrfToken) 
-                    div 
-                        label.block.text-sm.uppercase.text-gray-600.mb-3.font-bold(for="nombre") Tu Nombre
-                        input#nombre.w-full.px-3.py-2.border.border-lightBlue.rounded-md.placeholder-lightBlue(placeholder="Escribe tu nombre" type="text" name="nombre" value= usuario ? usuario.nombre : '')
-                    div 
-                        label.block.text-sm.uppercase.text-gray-600.mb-3.font-bold(for="email") Email de Registro
-                        input#email.w-full.px-3.py-2.border.border-lightBlue.rounded-md.placeholder-lightBlue(placeholder="Escribe tu email" type="email" name="email" value= usuario ? usuario.email : '' ) 
-                    div 
-                        label.block.text-sm.uppercase.text-gray-600.mb-3.font-bold(for="password") Password
-                        input#password.w-full.px-3.py-2.border.border-lightBlue.rounded-md.placeholder-lightBlue(placeholder="Escribe tu password" type="password" name="password")        
-                    div 
-                        label.block.text-sm.uppercase.text-gray-600.mb-3.font-bold(for="repetir_password") Repetir password
-                        input#repetir_password.w-full.px-3.py-2.border.border-lightBlue.rounded-md.placeholder-lightBlue(placeholder="Repite tu password" type="password" name="repetir_password")         
+               form(method="POST" action="/auth/registro" noValidate).space-y-5.px-6
+                    input(type="hidden" name="_csrf" value= csrfToken)
+                    div
+                        label.block.text-sm.uppercase.text-black.mb-2.font-bold Nombre Completo: 
+                        input#name.w-full.px-3.py-2.border-2.border-black.rounded-md(type="text" placeholder="Ej. Juanito Peréz" name="nombre" value=(usuario && usuario.nombre ? usuario.nombre : ""))
+                    div
+                        label.block.text-sm.uppercase.text-black.mb-2.font-bold Alias: 
+                        input#alias.w-full.px-3.py-2.border-2.border-black.rounded-md(type="text" placeholder="Ej. juanperez123" name="alias" value=(usuario && usuario.alias ? usuario.alias : ""))
+                    div
+                        label.block.text-sm.uppercase.text-gray-500.mb-2.font-bold Email de Registro: 
+                        input#email.w-full.px-3.py-2.border-2.border-black.rounded-md(type="email" placeholder="Ej. usuario@paisdelasmaravillas.com" name="email" value=(usuario && usuario.email ? usuario.email : ""))
+                    div
+                        label.block.text-sm.uppercase.text-black.mb-2.font-bold Fecha de Nacimiento: 
+                        input#birthdate.w-full.px-3.py-2.border-2.border-black.rounded-md(type="date" name="fecha_nacimiento" value=(usuario && usuario.fecha_nacimiento ? usuario.fecha_nacimiento : ""))
+                    div
+                        label.block.text-sm.uppercase.text-black.mb-2.font-bold Contraseña: 
+                        input#password.w-full.px-3.py-2.border-2.border-black.rounded-md(type="password" placeholder="Minimo de 8 caracteres" name="password")
+                    div
+                        label.block.text-sm.uppercase.text-black.mb-2.font-bold Confirmar Contraseña: 
+                        input#password2.w-full.px-3.py-2.border-2.border-black.rounded-md(type="password" placeholder="Minimo de 8 caracteres" name="repetir_password")
+                    div.flex.items-center.justify-between
+                        a.text-gray-500.text-xs(href="/auth/login" class="hover:underline decoration-2 hover:decoration-azulrey") ¿Ya tienes cuenta? Inicia Sesión
+                        a.text-gray-500.text-xs(href="/auth/olvide-password" class="hover:underline decoration-2 hover:decoration-azulrey") Recuperar Contraseña
                     
-                    div.flex.items-center.justify-between 
-                        a.text-gray-600.text-xs(href="/auth/login") ¿Ya tienes cuenta? Inicia Sesión
-                        a.text-gray-600.text-xs(href="/auth/olvide-password") Olvide mi Password 
 
                     input(class="w-full bg-violetCustom hover:bg-lightBlue text-white font-bold py-3 cursor-pointer" type="submit" value="Crear cuenta")
