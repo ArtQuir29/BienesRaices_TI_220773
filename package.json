@@ -21,7 +21,7 @@
     "MySQL",
     "Sequelize"
   ],
-  "author": "Esperanza Cruz Galindo: Ailton Artiaga Quiroga",
+  "author": " v2.0 Esperanza Cruz Galindo: Ailton Artiaga Quiroga",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
